@@ -38,7 +38,31 @@ The digital DEA signing certificate includes both the company’s required ident
 
 Using the DEA Signing Certificate in the context of DSCSA:
 
-The DEA has ruled in the ECom Certificate Policy V4.1 policy that the Controlled Substance Ordering System certificates can be used for purposes other than controlled substance transactions. The policy allows a certificate to be used for any type of transaction which includes risk of fraud (such as an organization trying to present itself as a different organization, which is the problem the Spherity Credentialing Service is solving in the context of DSCSA.) The full document is available for download from the DEA website at http://www.deaecom.gov/ECOM_CP.pdf
+_The DEA has ruled in the ECom Certificate Policy V4.1 policy that the Controlled Substance Ordering System certificates can be used for purposes other than controlled substance transactions. The policy allows a certificate to be used for any type of transaction which includes risk of fraud (such as an organization trying to present itself as a different organization, which is the problem the Spherity Credentialing Service is solving in the context of DSCSA.) The full document is available for download from the DEA website at http://www.deaecom.gov/ECOM_CP.pdf
+_
+
+### Identity Credential properties
+
+- Credential Type 
+- Credential ID
+- Issuer DID
+- Issuer Name
+- Credential Issuance Date
+- Credential Expiration Date
+- Subject DID
+- Subject Type
+- Subject Parent Organization
+- Subject Name
+- Subject Address
+- Subject Street
+- Subject Locality
+- Subject Region
+- Subject Postal Code
+- Due Diligence Source
+- Due Diligence Signature 
+- Revocation 
+- Issuer Signature
+
 
 ### Identity verification with paper documents
 If no person in the company has a DEA Signing Certificate, then the identity proofing can take place via the paper documents and “wet” signature path.
@@ -71,6 +95,26 @@ The credential issuer verifies the provided information by comparing the provide
 - DSCSA Dispenser ATP Credential
 
 The acquired ATP Credential is stored on the enterprise identity wallet and users can see the credential.
+
+### ATP Credential properties
+
+- Credential Type 
+- Credential ID
+- Issuer DID
+- Issuer Name
+- Credential Issuance Date
+- Credential Expiration Date
+- Subject DID 
+- Subject Type
+- Subject Name
+- Subject Address
+- Subject Street
+- Subject Locality
+- Subject Region
+- Subject Postal Code
+- Corporate Entity GLN 
+- Revocation
+- Issuer Signature
 
 ### ATP Credential re-verification and revocation
 The issuer of the ATP Credential is obligated to periodically (every 24 hours) re-verifying the ATP status of the trading partner. The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail re-verification.
