@@ -131,11 +131,7 @@
       <h2>Introduction</h2>
 
       <p>
-        This specification describes a Linked Data vocabulary for asserting
-        Verifiable Credentials related to oci information, such as
-        chemical properties, mechanical properties, country of origin, and other
-        attributes used to determine the status of a products and materials in a
-        supply chain.
+        This specification describes a Linked Data vocabulary for asserting the digital identity and the ATP status of entities acting as trading partner in the pharmaceutical supply chain. Based on that vocabulary dispensers, wholesalers and manufacturers are able to first acquire an identity credential that is associated to a due diligence of their entity identity and second acquire a ATP credential as verifiable representation of their licenses status. Both credentials are issued by a trusted and accreditated credential issuer.
       </p>
 
       <p>
@@ -178,8 +174,8 @@
           <tbody>
             <tr>
               <td>OCI</td>
-              <td>Andrey Orlov</td>
-              <td>andrey.orlov@spherity.io</td>
+              <td>Georg Juergens</td>
+              <td>georg.juergens@spherity.com</td>
             </tr>
           </tbody>
         </table>
@@ -190,44 +186,134 @@
         <h3>Use Cases and Requirements</h3>
 
         <p>
-          The following use cases outline a number of key scenarios that readers
-          might find useful in a variety of sectors, especially those that deal
-          with cross border supply chain data interchange.
+          Under DSCSA regulations, trading partners must fulfill requirements to trace and validate suspicious or returned products along the supply chain. The required data exchange between trading partners occurs on a peer-to-peer basis by using electronic systems. Any trading partner that is interacting in a product verification or tracing operation must be “authorized” as defined under FD&C Act 581(2).
         </p>
 
+        <p>
+          Today, either an entity has an existing relationship of trust with their direct trading partner, or manual steps are implemented to establish trust to indirect trading partners. To manually establish a trusted affiliation with an indirect trading partner, an entity needs to collect records of the trading partner´s business registration, license status, or requires onboarding questionnaires. This manual process can take days, weeks, or in some cases, months. As a result of the existing system, it will be impossible to assure DSCSA compliance when thousands of indirect trading partners are needed to verify products and expect a response within 24h.
+        </p>
+
+        <p>
+          By enabling a digital verification in real time, the OCI maintained ATP architecture helps avoiding manual inefficient processes.
+        </p>
         <!-- definition styling works well for these, but we can adjust at a later data should we want to break out into another format -->
 
         <section>
           <h5><a href="./schemas/IdentityCredential.json">IdentityCredential</a></h5>
           <dl class="termlist">
             <p>
-              A common oci vocabulary will allow complex supply chains
-              that import goods to US-resident customers to register individual
-              packages and pre-register products intended for sale to the US
-              with US Customs. For the data needs of Customs to be met by highly
-              heterogenous supply chains that might require much "internal
-              confidentiality" (between supply chain actors), a highly sharded
-              data model is required, whereby many different actors can each
-              submit data points separately that get combined at time of customs
-              processing.
+              A trading partner needs to run through a onboarding process with a trusted identity verification provider - credential issuer. To request the issuance of the Identity Credential, the responsible person performing the onboarding needs to provide main entity data. Additionally the responsible person doing the onboarding must “prove” to the credential issuer that he/she an authorized representative, and that the digital identity of the entity (enterprise) is under control trading partner. The authorized representative performing the onboarding process needs to:
+            </p>
+            <ol>
+              <li>Present identifying information about the company; and</li>
+              <li>apply a legal signature to attest that the identifying information is true and accurate.</li>
+            </ol>
+            <p>
+              These two steps to identity proofing can be accomplished either digitally or by submitting paper documents.
+            </p>
+            <b>Identity verification with DEA Signing Certificate</b>
+            <p>
+              The digital identity proofing path requires a responsible person in the company to use their digital DEA Signing Certificate in their interaction with the credential issuer. The digital DEA signing certificate includes both the company’s required identifying information and the signature of the responsible person. This allows the credential issuer to build on a safe and expedited process for issuing the Identity Credential to the trading partner.
             </p>
             <p>
-              Without strong identification of legal entities (i.e., legally
-              defined and registered supply chain actors) and of products, and
-              without high levels of semantic flexibility, the shards can be
-              quite hard to combine usefully. Linking the registration of
-              individual packages together with the pre-registration of
-              commercial products and actors is the key value-add of this
-              system, but could also be a burdensome request on importers,
-              retailers, and freight forwarders. To minimize this burden, we are
-              aligning wherever possible with the ontology work of GS1 (GTINs
-              and vLEIs), and with shipping and tracking semantics already
-              adopted today by international logistics consortia. We distinguish
-              between the VCs that are issued in relation to a specific package
-              and the contextual information that needs to be queried to
-              validate package information, as well as to make valuable
-              assessments, inferences, and data quality remediation on Customs
-              pre-entry data.
+              Using the DEA Signing Certificate in the context of DSCSA:
+            </p>
+            <p>
+              _The DEA has ruled in the ECom Certificate Policy V4.1 policy that the Controlled Substance Ordering System certificates can be used for purposes other than controlled substance transactions. The policy allows a certificate to be used for any type of transaction which includes risk of fraud (such as an organization trying to present itself as a different organization, which is the problem the Spherity Credentialing Service is solving in the context of DSCSA.) The full document is available for download from the DEA website at
+              <a href="http://www.deaecom.gov/ECOM_CP.pdf">http://www.deaecom.gov/ECOM_CP.pdf</a> _
+            </p>
+            <b>Identity Credential properties</b>
+            <ul>
+              <li>Credential Type</li>
+              <li>Credential ID</li>
+              <li>Issuer DID</li>
+              <li>Issuer Name</li>
+              <li>Credential Issuance Date</li>
+              <li>Credential Expiration Date</li>
+              <li>Subject DID</li>
+              <li>Subject Type</li>
+              <li>Subject Parent Organization</li>
+              <li>Subject Name</li>
+              <li>Subject Address</li>
+              <li>Subject Street</li>
+              <li>Subject Locality</li>
+              <li>Subject Region</li>
+              <li>Subject Postal Code</li>
+              <li>Due Diligence Source</li>
+              <li>Due Diligence Signature</li>
+              <li>Revocation</li>
+              <li>Issuer Signature</li>
+            </ul>
+            <b>Identity verification with paper documents</b>
+            <p>
+              If no person in the company has a DEA Signing Certificate, then the identity proofing can take place via the paper documents and “wet” signature path. For those companies without a DEA Signing Certificate, the credential issuer requests a list of documents that the requestor needs to provide. Documents that provide equivalent identity establishing value will need to be identified. Examples include:
+            </p>
+            <ul>
+              <li>Articles of Incorporation</li>
+              <li>IRS Employer ID Number (EIN) letter</li>
+              <li>Regulator Issued License</li>
+              <li>DUNS number</li>
+            </ul>
+            <p>
+              Based on the provided documents, the credential issuer performs due diligence to verify the identity and issues an Identity Credential.
+            </p>
+            <p>
+              In addition, the authorized representative performing the onboarding would provide a copy of a government issued photo ID, and apply his/her signature by pen to a statement attesting that the documents being submitted for the identity proofing are true and accurate.
+            </p>
+            <b>Identity Credential re-verification and revocation</b>
+            <p>
+              The credential issuer is obligated to periodically re-verify the identity of the company and maintain an accessible revocation registry where they establish an entry for credentials that fail re-verification.
+            </p>
+          </dl>
+        </section>
+        <section>
+          <h5>ATP Credential</h5>
+          <dl class="termlist">
+            <p>
+              After acquiring the Identity Credential, the trading partner can request at a credential issuer an ATP Credential. Before issuing an ATP Credential, the credential issuer will request a presentation of the Identity Credential. Following this process, the credential issuer ensures that the verified digital identity receives the ATP credential.
+            </p>
+            <p>
+              In the saleable returns verification process, the ATP Credential travels with the PI Verification message and ensures that the enterprise identity is recognised an authorized trading partner. To acquire an ATP Credential for a enterprise identity, the trading partner needs to provide the following data to the credential issuer:
+            </p>
+            <ol>
+              <li>License number</li>
+              <li>License State</li>
+              <li>Global Location Number - this is optional data</li>
+            </ol>
+            <p>
+              The credential issuer verifies the provided information by comparing the provided data with the information in their database. When the license data entry matches with the public available license data, the credential issuer issues an ATP Credential for the trading partner. For different kinds of trading partners separate ATP Credential types are available:
+            </p>
+            <ul>
+              <li>DSCSA Wholesaler ATP Credential</li>
+              <li>DSCSA Manufacturer ATP Credential</li>
+              <li>DSCSA Dispenser ATP Credential</li>
+            </ul>
+            <p>
+              The acquired ATP Credential is stored on the enterprise identity wallet and users can see the credential.
+            </p>
+            <b>ATP Credential properties</b>
+            <ul>
+              <li>Credential Type</li>
+              <li>Credential ID</li>
+              <li>Issuer DID</li>
+              <li>Issuer Name</li>
+              <li>Credential Issuance Date</li>
+              <li>Credential Expiration Date</li>
+              <li>Subject DID</li>
+              <li>Subject Type</li>
+              <li>Subject Name</li>
+              <li>Subject Address</li>
+              <li>Subject Street</li>
+              <li>Subject Locality</li>
+              <li>Subject Region</li>
+              <li>Subject Postal Code</li>
+              <li>Corporate Entity GLN</li>
+              <li>Revocation</li>
+              <li>Issuer Signature</li>
+            </ul>
+            <b>ATP Credential re-verification and revocation</b>
+            <p>
+              The issuer of the ATP Credential is obligated to periodically (every 24 hours) re-verifying the ATP status of the trading partner. The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail re-verification.
             </p>
           </dl>
         </section>
