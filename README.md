@@ -51,7 +51,7 @@ _
 - Credential Expiration Date
 - Subject DID
 - Subject Type
-- Subject Parent Organization
+- Subject Parent Organization [optional]
 - Subject Name
 - Subject Address
 - Subject Street
@@ -86,7 +86,6 @@ In the saleable returns verification process, the ATP Credential travels with th
 
 1.	License number
 2.	License State 
-3.	Global Location Number - this is optional data
 
 The credential issuer verifies the provided information by comparing the provided data with the information in their database. When the license data entry matches with the public available license data, the credential issuer issues an ATP Credential for the trading partner. For different kinds of trading partners separate ATP Credential types are available:
 
@@ -94,7 +93,7 @@ The credential issuer verifies the provided information by comparing the provide
 - DSCSA Manufacturer ATP Credential
 - DSCSA Dispenser ATP Credential
 
-The acquired ATP Credential is stored on the enterprise identity wallet and users can see the credential.
+The acquired ATP Credential is stored on the enterprise identity wallet of the subject DID.
 
 ### ATP Credential properties
 
@@ -112,9 +111,9 @@ The acquired ATP Credential is stored on the enterprise identity wallet and user
 - Subject Locality
 - Subject Region
 - Subject Postal Code
-- Corporate Entity GLN 
+- Corporate Entity GLN [optional]
 - Revocation
 - Issuer Signature
 
-### ATP Credential re-verification and revocation
-The issuer of the ATP Credential is obligated to periodically (every 24 hours) re-verifying the ATP status of the trading partner. The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail re-verification.
+### ATP Credential revocation
+The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail a re-verification. 
