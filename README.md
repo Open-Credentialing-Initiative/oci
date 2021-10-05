@@ -2,7 +2,7 @@
 
 ## Draft Vocabulary for US DSCSA ATP Credentialing
 
-This specification describes a Linked Data vocabulary for asserting the digital identity and the ATP status of entities acting as trading partner in the pharmaceutical supply chain. Based on that vocabulary dispensers, wholesalers and manufacturers are able to first acquire an identity credential that is associated to a due diligence of their entity identity and second acquire a ATP credential as verifiable representation of their licenses status. Both credentials are issued by a trusted and accreditated credential issuer. 
+This specification describes a Linked Data vocabulary for asserting the digital identity and the ATP status of entities acting as trading partner in the pharmaceutical supply chain. Based on that vocabulary dispensers, wholesalers and manufacturers are able to first acquire an identity credential that is associated to a due diligence of their entity identity and second acquire a ATP credential as verifiable representation of their licenses status. Both credentials are issued by a trusted and accreditated credential issuer.
 
 ## US DSCSA requirements
 
@@ -27,23 +27,24 @@ Ecosystem adoption will be supported by open semantic standards in form of this 
 ## Identity Credential
 A trading partner needs to run through a onboarding process with a trusted identity verification provider - credential issuer. To request the issuance of the Identity Credential, the responsible person performing the onboarding needs to provide main entity data. Additionally the responsible person doing the onboarding must “prove” to the credential issuer that he/she an authorized representative, and that the digital identity of the entity (enterprise) is under control trading partner. The authorized representative performing the onboarding process needs to:
 
-1.	Present identifying information about the company; and
-2.	apply a legal signature to attest that the identifying information is true and accurate.
+1. Present identifying information about the company; and
+2. apply a legal signature to attest that the identifying information is true and accurate.
 
 These two steps to identity proofing can be accomplished either digitally or by submitting paper documents.
 
 ### Identity verification with DEA Signing Certificate
+
 The digital identity proofing path requires a responsible person in the company to use their digital DEA Signing Certificate in their interaction with the credential issuer.
 The digital DEA signing certificate includes both the company’s required identifying information and the signature of the responsible person. This allows the credential issuer to build on a safe and expedited process for issuing the Identity Credential to the trading partner.
 
 Using the DEA Signing Certificate in the context of DSCSA:
 
-_The DEA has ruled in the ECom Certificate Policy V4.1 policy that the Controlled Substance Ordering System certificates can be used for purposes other than controlled substance transactions. The policy allows a certificate to be used for any type of transaction which includes risk of fraud (such as an organization trying to present itself as a different organization, which is the problem the Spherity Credentialing Service is solving in the context of DSCSA.) The full document is available for download from the DEA website at http://www.deaecom.gov/ECOM_CP.pdf
+_The DEA has ruled in the ECom Certificate Policy V4.1 policy that the Controlled Substance Ordering System certificates can be used for purposes other than controlled substance transactions. The policy allows a certificate to be used for any type of transaction which includes risk of fraud (such as an organization trying to present itself as a different organization, which is the problem the Spherity Credentialing Service is solving in the context of DSCSA.) The full document is available for download from the DEA website at <http://www.deaecom.gov/ECOM_CP.pdf>
 _
 
 ### Identity Credential properties
 
-- Credential Type 
+- Credential Type
 - Credential ID
 - Issuer DID
 - Issuer Name
@@ -59,14 +60,15 @@ _
 - Subject Region
 - Subject Postal Code
 - Due Diligence Source
-- Due Diligence Signature 
-- Revocation 
+- Due Diligence Signature
+- Revocation
 - Issuer Signature
 
-
 ### Identity verification with paper documents
+
 If no person in the company has a DEA Signing Certificate, then the identity proofing can take place via the paper documents and “wet” signature path.
 For those companies without a DEA Signing Certificate, the credential issuer requests a list of documents that the requestor needs to provide. Documents that provide equivalent identity establishing value will need to be identified. Examples include:
+
 - Articles of Incorporation
 - IRS Employer ID Number (EIN) letter
 - Regulator Issued License
@@ -75,17 +77,19 @@ For those companies without a DEA Signing Certificate, the credential issuer req
 Based on the provided documents, the credential issuer performs due diligence to verify the identity and issues an Identity Credential.
 
 In addition, the authorized representative performing the onboarding would provide a copy of a government issued photo ID, and apply his/her signature by pen to a statement attesting that the documents being submitted for the identity proofing are true and accurate.
- 
+
 ### Identity Credential re-verification and revocation
+
 The credential issuer is obligated to periodically re-verify the identity of the company and maintain an accessible revocation registry where they establish an entry for credentials that fail re-verification.
 
 ## ATP Credential
+
 After acquiring the Identity Credential, the trading partner can request at a credential issuer an ATP Credential. Before issuing an ATP Credential, the credential issuer will request a presentation of the Identity Credential. Following this process, the credential issuer ensures that the verified digital identity receives the ATP credential.
 
 In the saleable returns verification process, the ATP Credential travels with the PI Verification message and ensures that the enterprise identity is recognised an authorized trading partner. To acquire an ATP Credential for a enterprise identity, the trading partner needs to provide the following data to the credential issuer:
 
-1.	License number
-2.	License State 
+1. License number
+2. License State
 
 The credential issuer verifies the provided information by comparing the provided data with the information in their database. When the license data entry matches with the public available license data, the credential issuer issues an ATP Credential for the trading partner. For different kinds of trading partners separate ATP Credential types are available:
 
@@ -97,13 +101,13 @@ The acquired ATP Credential is stored on the enterprise identity wallet of the s
 
 ### ATP Credential properties
 
-- Credential Type 
+- Credential Type
 - Credential ID
 - Issuer DID
 - Issuer Name
 - Credential Issuance Date
 - Credential Expiration Date
-- Subject DID 
+- Subject DID
 - Subject Type
 - Subject Name
 - Subject Address
@@ -116,4 +120,5 @@ The acquired ATP Credential is stored on the enterprise identity wallet of the s
 - Issuer Signature
 
 ### ATP Credential revocation
-The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail a re-verification. 
+
+The credential issuer maintains an accessible revocation registry where they establish an entry for credentials that fail a re-verification.
