@@ -4,4 +4,5 @@ DSCSAManufacturerATPCredential: require('./schemas/DSCSAManufacturerATPCredentia
 DSCSAWholesalerATPCredential: require('./schemas/DSCSAWholesalerATPCredential.json'),
 IdentityCredential: require('./schemas/IdentityCredential.json'),
 PostalAddress: require('./schemas/PostalAddress.json'),
+testabc: require('./schemas/testabc.json'),
 };

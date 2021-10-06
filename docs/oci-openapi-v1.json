@@ -134,6 +134,7 @@
     "schemas": {
       "DSCSADispenserATPCredential": {
         "title": "DSCSADispenserATPCredential",
+        "description": "Credential represents authorized status for Dispensers.",
         "type": "object",
         "required": [
           "legalName",
@@ -158,13 +159,16 @@
           },
           "legalName": {
             "title": "Legal Name",
+            "description": "Name of the legal entity or location holding the ATP Credential.",
             "type": "string"
           },
           "address": {
-            "title": "Address"
+            "title": "Address",
+            "description": "Address of the legal entity or location holding the ATP Credential"
           },
           "globalLocationNumber": {
             "title": "Global Location Number",
+            "description": "Corporate Entity GLN. Optional.",
             "type": "string"
           }
         },
@@ -172,6 +176,7 @@
       },
       "DSCSAManufacturerATPCredential": {
         "title": "DSCSAManufacturerATPCredential",
+        "description": "Credential represents authorized status for Manufacturers.",
         "type": "object",
         "required": [
           "legalName",
@@ -196,13 +201,16 @@
           },
           "legalName": {
             "title": "Legal Name",
+            "description": "Name of the legal entity or location holding the ATP Credential..",
             "type": "string"
           },
           "address": {
-            "title": "Address"
+            "title": "Address",
+            "description": "Address of the legal entity or location holding the ATP Credential"
           },
           "globalLocationNumber": {
             "title": "Global Location Number",
+            "description": "Corporate Entity GLN. Optional.",
             "type": "string"
           }
         },
@@ -210,6 +218,7 @@
       },
       "DSCSAWholesalerATPCredential": {
         "title": "DSCSAWholesalerATPCredential",
+        "description": "Credential represents authorized status for Wholesalers.",
         "type": "object",
         "required": [
           "legalName",
@@ -234,13 +243,16 @@
           },
           "legalName": {
             "title": "Legal Name",
+            "description": "Name of the legal entity or location holding the ATP Credential.",
             "type": "string"
           },
           "address": {
-            "title": "Address"
+            "title": "Address",
+            "description": "Address of the legal entity or location holding the ATP Credential"
           },
           "globalLocationNumber": {
             "title": "Global Location Number",
+            "description": "Corporate Entity GLN. Optional.",
             "type": "string"
           }
         },
@@ -248,6 +260,7 @@
       },
       "IdentityCredential": {
         "title": "IdentityCredential",
+        "description": "Identity Credential assues that Credential Issuer performed an identity verification process and that subject DID is a trusted entity.",
         "type": "object",
         "required": [
           "parent",
@@ -274,14 +287,17 @@
           },
           "parent": {
             "title": "Parent Organization",
+            "description": "Name of the legal entity or location holding the ATP Credential.",
             "type": "string"
           },
           "legalName": {
             "title": "Legal Name",
+            "description": "Address of the legal entity or location holding the ATP Credential",
             "type": "string"
           },
           "address": {
-            "title": "Address"
+            "title": "Address",
+            "description": "Corporate Entity GLN. Optional."
           },
           "dueDiligenceSource": {
             "title": "Due Diligence Source",

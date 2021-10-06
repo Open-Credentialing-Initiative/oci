@@ -7,27 +7,31 @@
       "@id": "https://open-credentialing-initiative.github.io/oci#DSCSADispenserATPCredential"
     },
     "title": "DSCSADispenserATPCredential",
+    "description": "Credential represents authorized status for Dispensers.",
     "classProperties": {
       "https://schema.org/name": {
         "$comment": {
           "term": "legalName",
           "@id": "https://schema.org/name"
         },
-        "title": "Legal Name"
+        "title": "Legal Name",
+        "description": "Name of the legal entity or location holding the ATP Credential."
       },
       "https://open-credentialing-initiative.github.io/oci#PostalAddress": {
         "$comment": {
           "term": "address",
           "@id": "https://open-credentialing-initiative.github.io/oci#PostalAddress"
         },
-        "title": "Address"
+        "title": "Address",
+        "description": "Address of the legal entity or location holding the ATP Credential"
       },
       "https://schema.org/globalLocationNumber": {
         "$comment": {
           "term": "globalLocationNumber",
           "@id": "https://schema.org/globalLocationNumber"
         },
-        "title": "Global Location Number"
+        "title": "Global Location Number",
+        "description": "Corporate Entity GLN. Optional."
       }
     },
     "schema": {
@@ -35,6 +39,7 @@
       "$schema": "https://json-schema.org/draft-07/schema#",
       "$comment": "{\"term\": \"DSCSADispenserATPCredential\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#DSCSADispenserATPCredential\"}",
       "title": "DSCSADispenserATPCredential",
+      "description": "Credential represents authorized status for Dispensers.",
       "type": "object",
       "required": [
         "legalName",
@@ -58,16 +63,19 @@
         "legalName": {
           "$comment": "{\"term\": \"legalName\", \"@id\": \"https://schema.org/name\"}",
           "title": "Legal Name",
+          "description": "Name of the legal entity or location holding the ATP Credential.",
           "type": "string"
         },
         "address": {
           "$comment": "{\"term\": \"address\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#PostalAddress\"}",
           "title": "Address",
+          "description": "Address of the legal entity or location holding the ATP Credential",
           "$ref": "https://open-credentialing-initiative.github.io/oci/schemas/PostalAddress.json"
         },
         "globalLocationNumber": {
           "$comment": "{\"term\": \"globalLocationNumber\", \"@id\": \"https://schema.org/globalLocationNumber\"}",
           "title": "Global Location Number",
+          "description": "Corporate Entity GLN. Optional.",
           "type": "string"
         }
       },
@@ -82,27 +90,31 @@
       "@id": "https://open-credentialing-initiative.github.io/oci#DSCSAManufacturerATPCredential"
     },
     "title": "DSCSAManufacturerATPCredential",
+    "description": "Credential represents authorized status for Manufacturers.",
     "classProperties": {
       "https://schema.org/name": {
         "$comment": {
           "term": "legalName",
           "@id": "https://schema.org/name"
         },
-        "title": "Legal Name"
+        "title": "Legal Name",
+        "description": "Name of the legal entity or location holding the ATP Credential.."
       },
       "https://open-credentialing-initiative.github.io/oci#PostalAddress": {
         "$comment": {
           "term": "address",
           "@id": "https://open-credentialing-initiative.github.io/oci#PostalAddress"
         },
-        "title": "Address"
+        "title": "Address",
+        "description": "Address of the legal entity or location holding the ATP Credential"
       },
       "https://schema.org/globalLocationNumber": {
         "$comment": {
           "term": "globalLocationNumber",
           "@id": "https://schema.org/globalLocationNumber"
         },
-        "title": "Global Location Number"
+        "title": "Global Location Number",
+        "description": "Corporate Entity GLN. Optional."
       }
     },
     "schema": {
@@ -110,6 +122,7 @@
       "$schema": "https://json-schema.org/draft-07/schema#",
       "$comment": "{\"term\": \"DSCSAManufacturerATPCredential\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#DSCSAManufacturerATPCredential\"}",
       "title": "DSCSAManufacturerATPCredential",
+      "description": "Credential represents authorized status for Manufacturers.",
       "type": "object",
       "required": [
         "legalName",
@@ -133,16 +146,19 @@
         "legalName": {
           "$comment": "{\"term\": \"legalName\", \"@id\": \"https://schema.org/name\"}",
           "title": "Legal Name",
+          "description": "Name of the legal entity or location holding the ATP Credential..",
           "type": "string"
         },
         "address": {
           "$comment": "{\"term\": \"address\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#PostalAddress\"}",
           "title": "Address",
+          "description": "Address of the legal entity or location holding the ATP Credential",
           "$ref": "https://open-credentialing-initiative.github.io/oci/schemas/PostalAddress.json"
         },
         "globalLocationNumber": {
           "$comment": "{\"term\": \"globalLocationNumber\", \"@id\": \"https://schema.org/globalLocationNumber\"}",
           "title": "Global Location Number",
+          "description": "Corporate Entity GLN. Optional.",
           "type": "string"
         }
       },
@@ -157,27 +173,31 @@
       "@id": "https://open-credentialing-initiative.github.io/oci#DSCSAWholesalerATPCredential"
     },
     "title": "DSCSAWholesalerATPCredential",
+    "description": "Credential represents authorized status for Wholesalers.",
     "classProperties": {
       "https://schema.org/name": {
         "$comment": {
           "term": "legalName",
           "@id": "https://schema.org/name"
         },
-        "title": "Legal Name"
+        "title": "Legal Name",
+        "description": "Name of the legal entity or location holding the ATP Credential."
       },
       "https://open-credentialing-initiative.github.io/oci#PostalAddress": {
         "$comment": {
           "term": "address",
           "@id": "https://open-credentialing-initiative.github.io/oci#PostalAddress"
         },
-        "title": "Address"
+        "title": "Address",
+        "description": "Address of the legal entity or location holding the ATP Credential"
       },
       "https://schema.org/globalLocationNumber": {
         "$comment": {
           "term": "globalLocationNumber",
           "@id": "https://schema.org/globalLocationNumber"
         },
-        "title": "Global Location Number"
+        "title": "Global Location Number",
+        "description": "Corporate Entity GLN. Optional."
       }
     },
     "schema": {
@@ -185,6 +205,7 @@
       "$schema": "https://json-schema.org/draft-07/schema#",
       "$comment": "{\"term\": \"DSCSAWholesalerATPCredential\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#DSCSAWholesalerATPCredential\"}",
       "title": "DSCSAWholesalerATPCredential",
+      "description": "Credential represents authorized status for Wholesalers.",
       "type": "object",
       "required": [
         "legalName",
@@ -208,16 +229,19 @@
         "legalName": {
           "$comment": "{\"term\": \"legalName\", \"@id\": \"https://schema.org/name\"}",
           "title": "Legal Name",
+          "description": "Name of the legal entity or location holding the ATP Credential.",
           "type": "string"
         },
         "address": {
           "$comment": "{\"term\": \"address\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#PostalAddress\"}",
           "title": "Address",
+          "description": "Address of the legal entity or location holding the ATP Credential",
           "$ref": "https://open-credentialing-initiative.github.io/oci/schemas/PostalAddress.json"
         },
         "globalLocationNumber": {
           "$comment": "{\"term\": \"globalLocationNumber\", \"@id\": \"https://schema.org/globalLocationNumber\"}",
           "title": "Global Location Number",
+          "description": "Corporate Entity GLN. Optional.",
           "type": "string"
         }
       },
@@ -232,27 +256,31 @@
       "@id": "https://open-credentialing-initiative.github.io/oci#IdentityCredential"
     },
     "title": "IdentityCredential",
+    "description": "Identity Credential assues that Credential Issuer performed an identity verification process and that subject DID is a trusted entity.",
     "classProperties": {
       "https://schema.org/parentOrganization": {
         "$comment": {
           "term": "parent",
           "@id": "https://schema.org/parentOrganization"
         },
-        "title": "Parent Organization"
+        "title": "Parent Organization",
+        "description": "Name of the legal entity or location holding the ATP Credential."
       },
       "https://schema.org/name": {
         "$comment": {
           "term": "legalName",
           "@id": "https://schema.org/name"
         },
-        "title": "Legal Name"
+        "title": "Legal Name",
+        "description": "Address of the legal entity or location holding the ATP Credential"
       },
       "https://open-credentialing-initiative.github.io/oci#PostalAddress": {
         "$comment": {
           "term": "address",
           "@id": "https://open-credentialing-initiative.github.io/oci#PostalAddress"
         },
-        "title": "Address"
+        "title": "Address",
+        "description": "Corporate Entity GLN. Optional."
       },
       "https://open-credentialing-initiative.github.io/oci#dueDiligenceSource": {
         "$comment": {
@@ -276,6 +304,7 @@
       "$schema": "https://json-schema.org/draft-07/schema#",
       "$comment": "{\"term\": \"IdentityCredential\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#IdentityCredential\"}",
       "title": "IdentityCredential",
+      "description": "Identity Credential assues that Credential Issuer performed an identity verification process and that subject DID is a trusted entity.",
       "type": "object",
       "required": [
         "parent",
@@ -301,16 +330,19 @@
         "parent": {
           "$comment": "{\"term\": \"parent\", \"@id\": \"https://schema.org/parentOrganization\"}",
           "title": "Parent Organization",
+          "description": "Name of the legal entity or location holding the ATP Credential.",
           "type": "string"
         },
         "legalName": {
           "$comment": "{\"term\": \"legalName\", \"@id\": \"https://schema.org/name\"}",
           "title": "Legal Name",
+          "description": "Address of the legal entity or location holding the ATP Credential",
           "type": "string"
         },
         "address": {
           "$comment": "{\"term\": \"address\", \"@id\": \"https://open-credentialing-initiative.github.io/oci#PostalAddress\"}",
           "title": "Address",
+          "description": "Corporate Entity GLN. Optional.",
           "$ref": "https://open-credentialing-initiative.github.io/oci/schemas/PostalAddress.json"
         },
         "dueDiligenceSource": {
