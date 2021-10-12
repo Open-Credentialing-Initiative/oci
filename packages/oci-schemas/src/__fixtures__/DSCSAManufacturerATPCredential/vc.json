@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://open-credentialing-initiative.github.io/oci/contexts/oci-v1.jsonld",
+    "https://spherity.github.io/vc-status-2021-ldap/contexts/vc-status-2021-ldap/v1.jsonld"
+  ],
+  "type": ["VerifiableCredential"],
+  "id": "urn:uuid:56bd0f9a-3ea6-480b-b318-5ba78a04e98b",
+  "issuer": {
+    "id": "did:web:oci-credential-issuer.open-credentialing-initiative.github.io",
+    "name": "OCI Credential Issuer"
+  },
+  "credentialSubject": {
+    "id": "did:ethr:ropsten:0x0387daeed6fff79d4e27d2460a3d387cd129258667c388153602d10854bdf0be8c",
+    "type": "DSCSAManufacturerATPCredential",
+    "parent": "ValidCA ValidOrderOne Inc",
+    "legalName": "ValidCA ValidOrderOne Inc",
+    "address": {
+      "type": "PostalAddress",
+      "streetAddress": "270 Linden Avenue",
+      "addressLocality": "Orlando",
+      "addressRegion": "Florida",
+      "postalCode": "32810"
+    },
+    "dueDiligenceSource": "DEA Signing Certificate",
+    "dueDiligenceSignature": "MIIThg...."
+  },
+  "issuanceDate": "2021-10-05T07:06:26.000Z",
+  "expirationDate": "2022-03-01T05:00:00.000Z",
+  "credentialStatus": {
+    "id": "ldaps://oci-credential-issuer.open-credentialing-initiative.github.io:636/o=urn:uuid:56bd0f9a-3ea6-480b-b318-5ba78a04e98b,cn=CRL 671,ou=DSCSA Manufacturer ATP Credential,dc=OCICredentialIssuer,dc=com",
+    "type": "RevocationStatus2021LDAP",
+    "ssl": true,
+    "host": "oci-credential-issuer.open-credentialing-initiative.github.io:636",
+    "query": "o={{0}},cn={{1}},ou={{2}},dc={{3}},dc={{4}}",
+    "params": [
+      "urn:uuid:56bd0f9a-3ea6-480b-b318-5ba78a04e98b",
+      "CRL 671",
+      "DSCSA Manufacturer ATP Credential",
+      "OCICredentialIssuer",
+      "com"
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "created": "2021-10-05T07:06:28Z",
+    "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..pNZ171mqX23Rp7zfv_rtdUJ2UoTi4e6Y7SXG6IN-A0M3DMFzYA08ujZL2Kgk2H19iBisg8caIHhzDyt7RvYHBA",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:oci-credential-issuer.open-credentialing-initiative.github.io#z6Mko38PtCXHZC2PLDxuoD3NiVmHyfU6wfgJ8JGEN5UQqmdN"
+  }
+}
